@@ -3,8 +3,8 @@
 This is a Myfriend list project
 
 ## 專案畫面 Presentation Project
-![MyImage](public/img/friend app dark.PNG)
-![MyImage](public/img/friend app.PNG)
+![MyImage](https://github.com/akedaikuki/Myfriend-list-app/blob/main/public/img/friend%20app.PNG)
+![MyImage](https://github.com/akedaikuki/Myfriend-list-app/blob/main/public/img/friend%20app%20dark.PNG)
 
 ## 網站功能 Features
 - 查看所有朋友 view all friends
