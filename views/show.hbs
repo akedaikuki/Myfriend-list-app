@@ -1,0 +1,47 @@
+<div class="show_box">
+  <div class="show_info">
+    <div class="show mb-2">
+          <div class="show_image">
+            <img src="{{friend.natureImageUrl}}" alt="Background image for Eugene Zboncak" />
+          </div>
+          <div class="show_profile">
+            <img src="{{friend.avatarUrl}}" alt="Avatar image of Eugene Zboncak" />
+          </div>
+   </div>
+  <div class="show_body">
+    <form class="friends-info">
+              <div class="friends_info_item" >
+                <h2 id="friends-name"><i class="fa-regular fa-user"> </i>
+                   {{friend.name}}</h2></div>
+              <div class="friends_info_item">
+                <p id="friends-phone"><i class="fa-solid fa-mobile-screen-button"> </i>
+                   {{friend.phone}}</p></div>
+              <div class="friends_info_item">
+                <p id="friends-jobTitle"><i class="fa-solid fa-briefcase"> </i>
+                   {{friend.jobTitle}}</p></div>
+              <div class="friends_info_item">
+                <p id="friends-company"><i class="fa-regular fa-building"> </i>
+                   {{friend.company}}</p></div>
+              <div class="friends_info_item">
+                <a href="{{friend.email}}">{{friend.email}}</a></div>
+              <div class="friends_info_item">
+                <i class="fa-solid fa-map-location-dot"> </i>   {{friend.address.address}}<br>
+                   {{friend.address.city}}    {{friend.address.state}}    {{friend.address.zip}}
+                 </div>
+              
+     </form>
+      
+    </div>
+  </div>
+</div>
+
+<div id="friend-panel" class="show_footer text-muted"> 
+  <div class="d-flex justify-content-end flex-wrap">
+    <span>
+      <a href="/friends/{{friend._id}}/edit"><button class="btn btn-secondary btn-sm mx-2"><i class="show_i fa-regular fa-pen-to-square"></i></button></a>
+        <button type="button" class="btn-delete btn btn-sm mx-2" data-id="{{ friend._id }}" data-name="{{ friend.name }}"><i class="show_i fa-solid fa-trash"></i></button>
+        <a href="/"><button type="button" class="show_i btn btn-outline-secondary">
+        <i class="fa-solid fa-arrow-rotate-left"></i> Return</button></a>
+    </span>  
+  </div>
+</div>  

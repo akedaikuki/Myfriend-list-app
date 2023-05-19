@@ -1,0 +1,87 @@
+<!-- search bar -->
+<div class="container search-bar">
+  <div class="search-bar-outer" id="search-bar">
+    <div class="search-bar-inner col-12">
+      <form action="/search">
+       <h4 class="mb-2">Search Friends：</h4>
+        
+        <div class="input-group ">
+          <input type="text" name="keyword" class="form-control" placeholder="Enter name to search..." aria-label="User Name..."
+            value="{{keyword}}" aria-describedby="search-button">
+          
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" id="search-button"><i class="fas fa-search"></i> Search</button>
+          </div>
+          
+          <div>
+          <select class="form-select mx-2" aria-label="Default select example" name="sort" onchange="this.form.submit()">
+            <option value="#" {{#unless sort}} disabled {{/unless}} selected>Selection Sort</option>
+            <option value="-_id" {{#is sort "-_id" }} selected {{/is}}>New</option>
+            <option value="_id" {{#is sort "_id" }} selected {{/is}}>Old</option>
+            <option value="name" {{#is sort "name" }} selected {{/is}}>A-Z</option>
+            <option value="-name" {{#is sort "-name" }} selected {{/is}}>Z-A</option>
+          </select>
+          </div>
+        
+        </div>
+          
+      </form>
+    </div>      
+  </div>
+  
+  <div class="add-bar-inner col-12">  
+    <div class="text-end mx-3">
+      <a href="/friends/new" class="btn btn_add btn-major"> <i class="fa-solid fa-circle-plus"></i> add Friend</a>
+    </div>
+  </div>
+  
+</div>
+<!-- users list -->
+<div id="friend-panel" class="container userslist mt-5">
+  {{#if friends}}
+  <div class="row" id="data-panel">
+    
+    <div class="col-sm-3">
+      {{#each friends}}  
+      <div class="text_secondary">
+        <div class="card mb-2">
+          
+          <div class="card_image">
+            <img src="{{this.natureImageUrl}}" alt="Background image for Eugene Zboncak" />
+          </div>
+          <div class="card_profile">
+            <img src="{{this.avatarUrl}}" alt="Avatar image of Eugene Zboncak" />
+          </div>
+
+          <div class="card_body">
+            <form class="friends-info">
+              <a href="/friends/{{this._id}}" class="friends_info_item">
+                
+                <h3 id="friends-name">
+                 {{this.name}}</h3>
+              </a>
+            </form>
+
+            <div class="card-footer text-muted"> 
+              <div class="d-flex justify-content-end flex-wrap">
+                <span>
+                  <a href="/friends/{{this._id}}/edit"><button class="btn btn-secondary btn-sm mx-2"><i class="fa-regular fa-pen-to-square"></i></button></a>
+                  <button type="button" class="btn-delete btn btn-sm mx-2" data-id="{{ this._id }}" data-name="{{ this.name }}"><i class="fa-solid fa-trash"></i></button>
+                </span>  
+              </div>
+            </div>  
+
+          </div>
+        </div>
+         
+      </div>
+     {{/each}}
+     {{else}}
+           <div class="text-center">
+             <span class="badge rounded-pill bg-warning text-dark fs-4">残念！沒有符合的關鍵字！</span>
+            </div>
+       {{/if}}  
+    </div>
+   
+  </div>
+</div>

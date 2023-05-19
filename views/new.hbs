@@ -1,0 +1,77 @@
+<div class="newfriend_info">
+  <h1 class="mb-1 restaurant-show-title">Add Friend</h1>
+  <div class="container">
+    <form action="/friends" method="POST">
+  
+    <div class="mb-3">
+      <label for="natureImageUrl">ImageUrl<span class="text-danger">*</span></label>
+      <input type="url" class="form-control" name="natureImageUrl" id="natureImageUrl" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="avatarUrl">AvatarUrl<span class="text-danger">*</span></label>
+      <input type="url" class="form-control" name="avatarUrl" id="avatarUrl" required>
+    </div>
+
+    {{!-- <div class="mb-3">
+      <form action="/somewhere/to/upload" enctype="multipart/form-data">
+      <label for="natureImageUrl">ImgURL<span class="text-danger"></span></label>
+        <input name="natureImageUrl" type="file" onchange="readURL(this)" accept="image/gif, image/jpeg, image/png" id="natureImageUrl">
+      </form>
+    </div>  --}}
+
+    {{!-- <div class="mb-3">
+      <form action="/somewhere/to/upload" enctype="multipart/form-data">
+      <label for="avatarUrl">AvatarURL<span class="text-danger"></span></label>
+        <input name="avatarUrl" type="file" accept="image/gif, image/jpeg, image/png" id="avatarUrl">
+      </form>
+    </div> --}}
+
+    <div class="mb-3">
+      <label for="name">Name:<span class="text-danger">*</span></label>
+      <input type="text" class="form-control" name="name" id="name" placeholder="Please enter your fullname ex: andy..." aria-label="default input example" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email:<span class="text-danger">*</span></label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Please enter your email..." aria-label="default input example" required>
+    </div>
+  
+    <div class="mb-3">
+      <label for="phone">Phone:<span class="text-danger">*</span></label>
+      <input type="tel" class="form-control" name="phone" id="phone" placeholder="02-2521-2813" aria-label="default input example" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="address">Address:<span class="text-danger"></span></label>
+      <input type="text" class="form-control" name="address.address" id="address" placeholder="7860 Lakin Pine" aria-label="default input example">
+      <label for="city">City:<span class="text-danger"></span></label>
+      <input type="text" class="form-control" name="address.city" id="city" placeholder="Port Mitchell" aria-label="default input example">
+      <label for="state">State:<span class="text-danger"></span></label>
+      <input type="text" class="form-control" name="address.state" id="state" placeholder="WV" aria-label="default input example">
+      <label for="zip">Zip:<span class="text-danger"></span></label>
+      <input type="text" class="form-control" name="address.zip" id="zip" placeholder="10039-7236" aria-label="default input example">
+    </div>
+  
+    <div class="mb-3">
+      <label for="jobTitle">JobTitle<span class="text-danger"></span></label>
+      <input type="text" class="form-control" name="jobTitle" id="jobTitle" placeholder="Please enter your job title..." aria-label="default input example">
+    </div>
+  
+    <div class="mb-3">
+      <label for="company">Company<span class="text-danger"></span></label>
+      <input type="text" class="form-control" name="company" id="company" placeholder="Please enter your company..." aria-label="default input example">
+    </div>
+  
+  
+    <div class="text-center mb-3">
+      <button type="submit" class="btn btn-secondary">
+        <i class="fa-solid fa-circle-plus"></i> Add Friend
+      </button>
+      <a href="/"><button type="button" class="btn btn-outline-secondary">
+        <i class="fa-solid fa-arrow-rotate-left"></i> Return
+      </button></a>
+    </div>
+    </form>
+  </div>
+</div>

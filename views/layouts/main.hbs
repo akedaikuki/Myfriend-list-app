@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   
+   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+   <link rel="stylesheet" href="/stylesheets/style.css">
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="navbar_container">
+      <a class="navbar-brand" href="/">
+      <img class="logo" src="/img/logo.png"/>®</a>
+    </div>
+  </nav>
+
+    <div class="audio">
+      <audio preload="metadata" controls autoplay loop>
+        <source src="/audio/Hope.wav" type="audio/wav">
+        你的瀏覽器不支援 audio tag！
+      </audio>
+    </div>
+
+    <div class="banner"> </div>
+</header> 
+  
+  <!-- partial templates will replace the part of "body" here -->
+  {{{ body }}}
+  
+<!-- goTop-->
+<section>
+  <div class="goTop">
+    <a href="#" class="goTopBtn jq-goTop">
+      <i class="fas fa-arrow-alt-circle-up fa-xl"></i>
+    </a>
+  </div>
+</section>
+<!-- Footer-->
+<footer>
+  <p> &copy; 2023 Friend List. All rights reserved. by IKUKI </p>
+</footer> 
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <script src="https://kit.fontawesome.com/0ddd9c88aa.js" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  
+  <script src="/javascripts/deleteModal.js"></script>
+  <script src="/javascripts/darkmode.js"></script>
+</body>
+</html>
