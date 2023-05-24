@@ -28,7 +28,7 @@ This is a Myfriend list project
 ```
 - Step2. 下載專案
 ```bash
-git clone https://github.com/akedaikuki/friend-list-app.git
+git clone https://github.com/akedaikuki/Myfriend-list-app.git
 ```
 - Step3. 終端機輸入
 ```bash  
@@ -97,4 +97,5 @@ ctrl+c
 - sweetalert2 11.7.5
 - dotenv 16.0.3
 - standard 17.0.0
+- @faker-js/faker 8.0.1
 - MongoDB
